@@ -24,25 +24,34 @@ Example context (json):
 
 }
 }}
-
-{{#message}}
-<div class="localmessage card mt-2 mb-2">
-    <div class="card-body">
-        <img src="{{picurl}}" alt="" width="180" height="150" class="dcms_img" />
-        <p>{{partnername}}</p>
-        <span class="op">
-            <a href="{{editpage}}?id={{id}}">
-                {{#pix}} t/edit, core, Edit this section {{/pix}}
-            </a>
-            <a href="{{editpage}}?id={{id}}&del=1">
-                {{#pix}} t/delete, core, Edit this section {{/pix}}
-            </a>
-        </span>
-
-    </div>
-</div>
-{{/message}}
-
+<div class="container">
+<h2 class="text-center">Valueable Partners</h2>
 <hr>
-<input type="button" class="btn btn-primary" value="{{val}}" onclick="location.href='{{editpage}}'" />
-<input type="button" class="btn btn-secondary" value="{{back}}" onclick="location.href='{{backurl}}'">
+    <div class="row">
+        {{#message}}
+<div class="col-xs-auto">
+        <div class="localmessage card  m-2" style="width: 16rem;">
+            <div class="card-body">
+                <img src="{{picurl}}" alt="" width="100" height="100" class="dcms_img" />
+                <h5>{{partnername}}</h5>
+
+
+            </div>
+            <span class="op text-center">
+                <a href="{{editpage}}?id={{id}}">
+                    {{#pix}} t/edit, core, Edit this section {{/pix}}
+                </a>
+                <a href="{{editpage}}?id={{id}}&del=1">
+                    {{#pix}} t/delete, core, Edit this section {{/pix}}
+                </a>
+            </span>
+        </div>
+    </div>
+        {{/message}}
+    </div>
+    <hr>
+    <div class="text-center">
+    <input type="button" class="btn btn-primary" value="{{val}}" onclick="location.href='{{editpage}}'" />
+    <input type="button" class="btn btn-secondary" value="{{back}}" onclick="location.href='{{backurl}}'">
+</div>
+</div>
